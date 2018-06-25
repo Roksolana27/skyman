@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SkyMan</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="SKYMAN - digital skydiving audible altimeter with logging functionality">
+	<meta name="keywords" content="altimeter, skydiving, canopy, parachute">
+    <link rel="icon" href="images/favicon-cloud.png" type="image/png" sizes="18x13">
+    
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+	<style>
+        html {
+          position: relative;
+          min-height: 100%;
+        }
+        body {
+/*          margin-bottom: 60px;  Margin bottom by footer height */
+        }
+        /* Animation */
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+        @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.animated {
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+        .footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 60px; /* Set the fixed height of the footer here */
+          line-height: 60px; /* Vertically center the text there */
+          background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+   <header>
+       <nav class="navbar navbar-default navbar-fixed-top" style="background-color:white">
+				<div class="container">
+					<div class="navbar-header page-scroll">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand page-scroll" href="#main" style="padding: 17px 0;"><p class="skyman-logo">SKYMAN</p></a>
+					</div>
+
+					<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
+							<li class="nav-item"><a class="nav-link active" href="cloud.html">Хмара</a></li>
+							<li class="nav-item"><a class="nav-link" href="manual.html">Інструкція</a></li>
+							<li class="nav-item"><a class="nav-link" href="update.html">Оновлення</a></li>
+							<li class="nav-item"><a class="nav-link" href="buy.html">Придбати</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+   </header>
+    <main role="main" class="container" id="main">
+      <div class="cloud-section">
+				<div class="container nopadding">
+				
+					<div class="col-md-6">
+						<img class="img-responsive animated animatedFadeInUp fadeIn" src="images/cloud.jpg" alt="cloud" />
+					</div>
+					
+					
+					<div class="col-md-6">
+						<div class="cloud-content">
+							<h1 class="animated animatedFadeInUp fadeInUp" data-wow-delay="0s">Хмара</h1>
+							<p class="animated animatedFadeInUp fadeInUp" data-wow-delay="0.2s">
+								На даний момент хмарний сервіс в процесі розробки. <br>Слідкуйте за оновленнями.
+							</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+    </main>
+    <footer class="footer footer-cloud">
+      <div class="container">
+        <span class="footer-text">©SKYMAN 2018</span>
+      </div>
+    </footer>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+</body>
+</html>
